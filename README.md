@@ -1,1 +1,1 @@
-# plg_sys_proifiles_extended
+# plg_sys_profile_extended
