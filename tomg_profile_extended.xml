@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.8" group="user" method="upgrade">
+	<name>PLG_USER_TOMG_PROFILE_EXTENDED</name>
+	<creationDate>06.11.20</creationDate>
+	<author>Thomas Goldbach</author>
+	<authorEmail>info@thomasgoldbach.de</authorEmail>
+	<authorUrl>https://thomasgoldbach.de</authorUrl>
+	<copyright>All right reserved by Thomas Goldbach</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0</version>
+	<description>PLG_USER_TOMG_PROFILE_EXTENDED_XML_DESCRIPTION</description>
+
+	<!-- Scripts to run on installation -->
+	<scriptfile>script.php</scriptfile>
+
+	<!-- Language files -->
+	<languages folder="language">
+		<language tag="de-DE">de-DE/de-DE.plg_user_tomg_profile_extended.ini</language>
+		<language tag="de-DE">de-DE/de-DE.plg_user_tomg_profile_extended.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_user_tomg_profile_extended.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_user_tomg_profile_extended.sys.ini</language>
+	</languages>
+
+	<!-- Plugin files -->
+	<files>
+		<filename plugin="tomg_profile_extended">tomg_profile_extended.php</filename>
+		<folder>language</folder>
+		<folder>sql</folder>
+		<folder>helpers</folder>
+	</files>
+
+	<!-- Config parameter -->
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="sample"
+					type="text"
+					default="42"
+					label="PLG_USER_TOMG_PROFILE_EXTENDED_SAMPLE_LABEL"
+					description="PLG_USER_TOMG_PROFILE_EXTENDED_SAMPLE_DESCRIPTION"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+
+	<!-- Update servers -->
+	<updateservers>
+		<server type="extension" priority="1" name="tomg_profile_extended">https://jupdates.thomasgoldbach.de/j3/plugins/tomg_profile_extended/manifest.xml</server>
+	</updateservers>
+</extension>
